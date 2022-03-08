@@ -4,11 +4,12 @@ import ColumnForm from '../ColumnForm/ColumnForm';
 import { useEffect } from 'react';
 import shortid from 'shortid';
 import { useSelector } from 'react-redux';
+import { getAllColumns } from '../../utils/getAllColumns';
 
 
 const List = () => {
 
-  const columns = useSelector(state => state.columns);
+  const columns = useSelector(getAllColumns);
 
   return (
     <div className={styles.list}>
